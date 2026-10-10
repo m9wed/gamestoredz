@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameStore — jeux vidéo, accessoires gaming et cartes cadeaux.">
+  <title>GameStore — Play More, Pay Less</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="GameStore accueil">
+      <span class="brand-icon">🎮</span>
+      <span><strong>Game<span>Store</span></strong><small>Play More, Pay Less</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#accueil">⌂ Accueil</a>
+      <a href="#produits">▦ Produits</a>
+      <a href="#categories">☷ Catégories</a>
+      <a href="#apropos">ⓘ À propos</a>
+    </nav>
+    <label class="search"><input id="searchInput" type="search" placeholder="Rechercher un produit..." aria-label="Rechercher un produit"><span>⌕</span></label>
+    <button class="cart-trigger" id="openCart" aria-label="Ouvrir le panier">🛒 <b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow">BIENVENUE SUR GAMESTORE</p>
+        <h1>Votre univers Gaming<br><span>au même endroit</span></h1>
+        <p>Jeux, accessoires, cartes cadeaux et plus encore. Tout ce dont vous avez besoin pour booster votre expérience de jeu !</p>
+        <a class="primary-btn" href="#produits">Découvrir maintenant <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="console">▰</div><div class="controller">🎮</div>
+        <div class="headset">🎧</div><div class="hero-caption">LEVEL UP YOUR GAME</div>
+      </div>
+    </section>
+
+    <section class="catalog-layout" id="produits">
+      <div class="catalog-main">
+        <div class="section-heading">
+          <h2><span>🎮</span> Produits populaires</h2>
+          <div class="filters" id="categories">
+            <button class="filter active" data-category="Tous">Tous</button>
+            <button class="filter" data-category="Consoles">Consoles</button>
+            <button class="filter" data-category="Accessoires">Accessoires</button>
+            <button class="filter" data-category="Jeux">Jeux</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+
+      <aside class="cart-panel" id="cartPanel" aria-label="Panier">
+        <div class="cart-heading"><h2>🛒 Panier <span id="cartHeadingCount">(0)</span></h2><button id="closeCart" class="icon-btn" aria-label="Fermer le panier">×</button></div>
+        <div id="cartItems" class="cart-items"><p class="empty-cart">Votre panier est vide. Ajoutez un produit !</p></div>
+        <div class="cart-total"><span>Sous-total</span><strong id="cartTotal">0 DA</strong></div>
+        <button class="primary-btn checkout-btn" id="checkoutBtn">Passer la commande <span>→</span></button>
+        <button class="secondary-btn" id="continueShopping">Continuer mes achats</button>
+        <p class="cart-note">Démo : aucune transaction réelle n'est effectuée.</p>
+      </aside>
+    </section>
+
+    <section class="benefits" id="apropos">
+      <div><span>🚚</span><p><strong>Livraison rapide</strong><small>Partout en Algérie</small></p></div>
+      <div><span>🛡️</span><p><strong>Paiement flexible</strong><small>Selon votre méthode de vente</small></p></div>
+      <div><span>🎧</span><p><strong>Support client</strong><small>Nous sommes là pour vous</small></p></div>
+      <div><span>✦</span><p><strong>Produits sélectionnés</strong><small>Pour tous les gamers</small></p></div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> GameStore</span><span>Fait pour les gamers, par les gamers. 🎮</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
